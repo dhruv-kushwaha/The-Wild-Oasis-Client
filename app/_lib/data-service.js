@@ -104,10 +104,10 @@ export async function getBookedDatesByCabinId(cabinId) {
 
   // Getting all bookings
   const { data, error } = await supabase
-    .from("bookings")
+    .from("Booking")
     .select("*")
     .eq("cabinId", cabinId)
-    .or(`startDate.gte.${today},status.eq.checked-in`);
+    .or(`startDate.gte.${today},status.eq.checkedIn`);
 
   if (error) {
     console.error(error);
@@ -128,7 +128,7 @@ export async function getBookedDatesByCabinId(cabinId) {
 }
 
 export async function getSettings() {
-  const { data, error } = await supabase.from("settings").select("*").single();
+  const { data, error } = await supabase.from("Setting").select("*").single();
 
   if (error) {
     console.error(error);
