@@ -66,7 +66,7 @@ export async function getGuest(email) {
 
 export async function getBooking(id) {
   const { data, error, count } = await supabase
-    .from("bookings")
+    .from("Booking")
     .select("*")
     .eq("id", id)
     .single();
@@ -164,6 +164,7 @@ export async function createGuest(newGuest) {
   return data;
 }
 
+/*
 export async function createBooking(newBooking) {
   const { data, error } = await supabase
     .from("bookings")
@@ -179,7 +180,7 @@ export async function createBooking(newBooking) {
 
   return data;
 }
-
+*/
 /////////////
 // UPDATE
 
