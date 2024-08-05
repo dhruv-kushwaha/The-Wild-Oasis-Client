@@ -18,6 +18,9 @@ export const metadata = {
   },
   description:
     "Luxurios cabin hotel located in the heart of the Italian surrounded by beautiful mountains and dark forests",
+  other: {
+    "google-site-verification": "_xxsVS6UybmsSR7NejhxLmHuJJnsvfxth3a0GQHj6kE",
+  },
 };
 
 export default function RootLayout({ children }) {
